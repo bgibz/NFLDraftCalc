@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <draft-chart :numRounds=7 :draftRounds="$options.rounds" :draftPicks="$options.picks"></draft-chart>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import jimmy from '../public/resources/jimmy.json'
+import DraftChart from './components/DraftChart.vue';
 export default {
+  components: { DraftChart },
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  numRounds: jimmy.numRounds,
+  rounds: jimmy.rounds,
+  picks: jimmy.draftPicks,
+  year: jimmy.year
+};
 </script>
 
 <style>
