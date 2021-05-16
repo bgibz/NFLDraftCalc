@@ -37,7 +37,7 @@
             numRounds: { default: 7, type: Number },
             draftRounds: { required: true, type: Array },
             draftPicks: { required: true, type: Array },
-            year: {required: true, type: Array }
+            year: {required: true, type: Number }
         },
         /*
         data() {

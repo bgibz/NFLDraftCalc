@@ -6,9 +6,10 @@
         <md-card-content>
             <div class="md-layout md-gutter">
                 <div class="md-layout-item">
-                    <md-field v-for="(pick, index) in tradePicks" :key="index">
-                    <label for="Adraft1">Draft Pick To Trade</label>
-                    <md-input name="Adraft1" id="Adraft1" v-model="ATeamDraft"/>
+                    
+                    <md-field v-for="(pick, index) in teamTradePicks" :key="index">
+                        <label :for="teamName + index">Draft Pick To Trade</label>
+                        <md-input :name="teamName + index" :id="teamName + index" :class="teamName+'-draft'" type="number" v-model.number="teamTradePicks[index]" v-on:change="updateTradePicks"/>
                     </md-field>
                     <div class="md-layout">
                         <md-button class="md-icon-button md-raised md-primary" @click="addTradePick">
@@ -16,6 +17,7 @@
                             <md-icon>add</md-icon>
                         </md-button>
                     </div>
+
                 </div>
             </div>
         </md-card-content>
@@ -26,15 +28,19 @@
 export default {
         props: {
             teamName: { required: true, type: String },
+            tradePicks: {required: true, type: Array}
         },
-    data() {
+   data() {
         return {
-                tradePicks: ['','']
+                teamTradePicks: this.tradePicks
             };
     },
     methods: {
         addTradePick: function () {
             this.tradePicks.push({ value: '' });
+        },
+        updateTradePicks: function () {
+            console.log(this.tradePicks);
         }
     }
 }
