@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <md-app>
+    <md-app id="calc-app">
       <md-app-toolbar class="md-primary">
           <span class="md-title">NFL Draft Pick Trade Calculator</span>
         </md-app-toolbar>
 
       <md-app-content>
-        <calc-form></calc-form>
+        <calc-form :draftPicks="$options.picks"></calc-form>
       </md-app-content>
 
     </md-app>
@@ -48,6 +48,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background: #E0E0E0;
+}
+#calc-app{
+  background: #E0E0E0
 }
 .xcont {
         padding: 5px 0px 5px 0px;

@@ -40,7 +40,8 @@ export default {
             this.tradePicks.push({ value: '' });
         },
         updateTradePicks: function () {
-            console.log(this.tradePicks);
+            //console.log(this.tradePicks);
+            this.$emit('update-traded-picks', this.tradePicks)
         }
     }
 }
