@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         addTradePick: function () {
-            this.tradePicks.push({ value: '' });
+            this.tradePicks.push({ value: "" });
         },
         updateTradePicks: function () {
             //console.log(this.tradePicks);
