@@ -1,24 +1,3 @@
-# vue-draftcalc
+# NFLDraftCalc 
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+A calculator built with Vue and Material Design (vueMaterial) which can be used to quickly evaluate NFL draft pick trades using the Jimmy Johnson chart as reference.
