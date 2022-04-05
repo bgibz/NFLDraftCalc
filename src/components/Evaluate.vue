@@ -17,10 +17,10 @@
                             <div v-if="diff == 0">
                                 <h4>This is an even trade</h4>
                             </div>
-                            <div v-else-if="diff > 0">
+                            <div v-else-if="diff < 0">
                                 <h4>Team A gains </h4> {{diff}} <h4> points through this trade </h4>
                             </div>
-                            <div v-else-if="diff < 0">
+                            <div v-else-if="diff > 0">
                                 <h4>Team B gains </h4> {{-diff}} <h4> points through this trade </h4>
                             </div>
                         </div>
